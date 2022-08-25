@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+:root {
+    --cor1: #024554;
+    --cor2: #53736A;
+    --cor3: #6A8C69;
+    --cor4: #A8B545;
+    --cor5: #C2C0A6;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    color: #323232;
+    border: none;
+}
+
+body {
+    background: linear-gradient(256deg, var(--cor2), var(--cor4));
+    background-size: 400% 400%;
+
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    -o-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 63%}
+    50%{background-position:100% 38%}
+    100%{background-position:0% 63%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 63%}
+    50%{background-position:100% 38%}
+    100%{background-position:0% 63%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 63%}
+    50%{background-position:100% 38%}
+    100%{background-position:0% 63%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 63%}
+    50%{background-position:100% 38%}
+    100%{background-position:0% 63%}
+}
+
+
+a{
+    text-decoration: none;
+    color: #323232;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+button {
+    background-color: white;
+    padding: 7.5px;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 0.8em;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+    box-shadow: 1px 1px 15px 1px rgb(48, 48, 48);
+}
+
+button:hover {
+    background-color: var(--cor4);
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: #323232;
+    background: white;
+    padding: 16px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 15px 1px rgb(48, 48, 48);
+    height: 100vh;
+    margin-bottom: 10px;
+}
+
+fieldset{
+    border: 3px solid #0cf259;
+    padding: 10px;
+}
+
+legend{
+    border: 1px solid #0cf259;
+    padding: 6px;
+    text-align: center; /*alinhar centro*/
+    background-color: #0cf259;
+    border-radius: 8px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+}
+
+.inputBox{
+    position: relative;
+    padding: -10px;
+}
+
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid  #323232;
+    outline: none;
+    color: #323232;
+    font-size: 11px;
+    width: 100%;
+    letter-spacing: 2px; /*aumenta espaçamento caracter*/
+}
+
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{ /*joga os input pra cima*/
+    top: -20px;
+    font-size: 12px;
+    color: #0cf246;
+}
+#data_nascimento{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px; /*aumenta a fonte*/
+}
+
+#submit{
+    background-color: #0cf259; 
+    width: 100%;
+    border: none;
+    padding: 10px;
+    color: #323232;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#submit:hover{
+    background-color: var(--cor5);
+}

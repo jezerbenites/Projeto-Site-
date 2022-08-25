@@ -1,0 +1,176 @@
+/*Header component*/
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+    :root {
+        --cor1: #024554;
+        --cor2: #53736A;
+        --cor3: #6A8C69;
+        --cor4: #A8B545;
+        --cor5: #C2C0A6;
+    }
+
+    body {
+            background: linear-gradient(45deg, var(--cor3) 30%, var(--cor4) 80%);
+            background-size: cover;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--cor4);
+            height: 55px;
+        }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .logo {
+        margin-left: 20px;
+        font-size: 24px;
+        text-transform: uppercase;
+        color: var(--cor4);
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    nav .nav-list {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 20px;
+        color: #323232;
+    }
+
+    nav .nav-list li {
+        display: flex;
+        align-items: center;
+        position: relative;
+        list-style: none;
+        padding: 0 20px;
+        height: 55px;
+        color: #323232;
+    }
+
+    nav .nav-list li::after {
+        content: "";
+        position: absolute;
+        background-color: #FFF;
+        height: 3px;
+        width: 0%;
+        top: 0;
+        left: 0;
+        transition: 1.2s ease-in-out;
+    }
+
+    nav .nav-list li:hover::after {
+        width: 100%;
+    }
+
+    .mobile-menu div {
+        background-color: #FFF;
+        height: 2px;
+        width: 32px;
+        margin: 8px;
+    }
+
+    /*Mobile menu*/
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.active .line1 {
+        transform: rotate(-45deg) translate(-8px, 8px);
+    }
+    
+    .mobile-menu.active .line2 {
+        opacity: 0;
+    }
+    
+    .mobile-menu.active .line3 {
+        transform: rotate(45deg) translate(-6px, -6px);
+    }
+
+    @media (max-width: 950px) {
+        body {
+            overflow-x: hidden;
+        }
+
+        nav {
+            height: 100%;
+        }
+        
+        .mobile-menu {
+            display: block;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        .nav-list {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 0;
+            padding: 20px 0;
+            top: 55px;
+            right: -20px;
+            background-color: #0f8558;
+            z-index: 1000;
+            transition: 0.6s;
+            visibility: hidden;
+        }
+
+        .nav-list.active {
+            width: 100%;
+            visibility: visible;
+            padding: 0;
+        }
+
+        .nav-list li {
+            width: 100%;
+            justify-content: center;
+        }
+    }
+
+    .artigo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        justify-items: center;
+        margin-top: 60px;
+    }
+
+
+    div.quadrado {
+        display: inline-grid;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        align-content: space-around;
+        flex-flow: row wrap;
+        flex-grow: 1;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: lightgray;
+        width: 300px;
+        height: 300px;
+    }
+
+    div#q1 {
+        background-color: var(--cor3);
+    }
+
+    div#q2 {
+        background-color: var(--cor3);
+    }
+
+    div#q3 {
+        background-color: var(--cor3);
+    }
+
